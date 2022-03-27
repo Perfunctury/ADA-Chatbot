@@ -38,23 +38,34 @@ generalHelp = "Can you please describe the help you are seeking in further detai
 # declaring list for user input choices and chatbot output responses.
 choices = [A, B, C, D]
 # answers = [AA, BB, CC, D] # has not been called yet
-posters = ["Poster One is a great choice. How may I help you with Poster one.",
-           "Poster Two is a fantastic choice. How may I help you with Poster Two.",
-           "Poster Three is a excellent choice. How may I help you with Poster Three."]
+
+posters = ["Poster One is a great choice. How may I help you with Poster one.\n "
+           "Perhaps do you need help with a specific size such as: \n A",
+           "Poster Two is a fantastic choice. How may I help you with Poster Two.\n "
+           "Perhaps do you need help with a specific size such as: \n ",
+           "Poster Three is a excellent choice. How may I help you with Poster Three.\n "
+           "Perhaps do you need help with a specific size such as: \n "]
+
 nft = ["NFT One is a great choice. How may I help you with NFT one.",
        "NFT Two is a fantastic choice. How may I help you with NFT Two.",
        "NFT Three is a excellent choice. How may I help you with NFT Three."]
+
 services = ["3D-Rendering", "Interior 3D-Rendering", "3D animation"]
 arr = ["poster 1", "poster 2", "poster 3"]
-nftchoices = ["nft 1", "nft 2", "nft 3"]
+# posterSize    [0]         [1]        [2]       [3]        [4]
+posterSize = ["8 x 10", "10 x 10", "12 x 12", "16 x 16", "24 x 24"]
+# posterSize    [0]      [1]      [2]
+nftChoices = ["nft 1", "nft 2", "nft 3"]
 
 print("Hello thank you for contacting us at HQA. My name is Ada, a chat bot.\n" "Created by our very own Stephen.\n" "Below are our current on-going sales.")
 print("Black Members Hoodie 20% off"
       " Premium Polo 15% off")
-print() # this print statement is to add a space between output and user input
+print()  # this print statement is to add a space between output and user input
 
 # this while True checks the initial choice from the user.
 # moves onto next sequence in while loop based on choice from the user
+# print("Type: 'done' when you are finished chatting")
+# Adone = "done"
 i = input("Do you need help with: \n" + str(choices) + "\n A, B, C, D \n")
 while i != (A, B, C, D):
     # i = input()
@@ -68,14 +79,29 @@ while i != (A, B, C, D):
             i = input()
             i = int(i)  # converts I into an int
             if i == 1:
-                print(posters[0])
+                print(posters[0] + str(posterSize))
+                i = input()
+                while i in posterSize[0 < 5]:
+                    continue
+                string = "Sounds perfect. I will contact Stephen to assist you with Poster 1. \nSize: "
+                print(string, i)
             elif i == 2:
-                print(posters[1])
+                print(posters[1] + str(posterSize))
+                i = input()
+                while i in posterSize[0 < 5]:
+                    continue
+                string = "Sounds perfect. I will contact Stephen to assist you with Poster 2. \nSize: "
+                print(string, i)
             elif i == 3:
-                print(posters[2])
+                print(posters[2] + str(posterSize))
+                i = input()
+                while i in posterSize[0 < 5]:
+                    continue
+                string = "Sounds perfect. I will contact Stephen to assist you with Poster 3. \nSize: "
+                print(string, i)
     # Sequence that occurs when the user choice is B
     elif i == "B":
-        print(BB, nftchoices)
+        print(BB, nftChoices)
         i = input()
         i = int(i)
         if i > 1:
