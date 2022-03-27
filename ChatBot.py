@@ -46,16 +46,28 @@ posters = ["Poster One is a great choice. How may I help you with Poster one.\n 
            "Poster Three is a excellent choice. How may I help you with Poster Three.\n "
            "Perhaps do you need help with a specific size such as: \n "]
 
-nft = ["NFT One is a great choice. How may I help you with NFT one.",
-       "NFT Two is a fantastic choice. How may I help you with NFT Two.",
-       "NFT Three is a excellent choice. How may I help you with NFT Three."]
+arr = [" 1) poster ",
+       " 2) poster ",
+       " 3) poster "]
+
+posterSize = [" 1) 8 x 10 ",
+              " 2) 10 x 10 ",
+              " 3) 12 x 12 ",
+              " 4) 16 x 16 ",
+              " 5) 24 x 24 "]
+
+frameColor = ["Black", "White"]
+
+nft = ["NFT 1 is a great choice. How may I help you with NFT one.",
+       "NFT 2 is a fantastic choice. How may I help you with NFT Two.",
+       "NFT 3 is a excellent choice. How may I help you with NFT Three."]
 
 services = ["3D-Rendering", "Interior 3D-Rendering", "3D animation"]
-arr = ["poster 1", "poster 2", "poster 3"]
-# posterSize    [0]         [1]        [2]       [3]        [4]
-posterSize = ["8 x 10", "10 x 10", "12 x 12", "16 x 16", "24 x 24"]
-# posterSize    [0]      [1]      [2]
-nftChoices = ["nft 1", "nft 2", "nft 3"]
+
+nftChoices = [" 1) nft ",
+              " 2) nft ",
+              " 3) nft "]
+
 
 print("Hello thank you for contacting us at HQA. My name is Ada, a chat bot.\n" "Created by our very own Stephen.\n" "Below are our current on-going sales.")
 print("Black Members Hoodie 20% off"
