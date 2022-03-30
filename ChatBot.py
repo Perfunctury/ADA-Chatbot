@@ -58,16 +58,25 @@ posterSize = [" 1) 8 x 10 ",
 
 frameColor = ["Black", "White"]
 
-nft = ["NFT 1 is a great choice. How may I help you with NFT one.",
-       "NFT 2 is a fantastic choice. How may I help you with NFT Two.",
-       "NFT 3 is a excellent choice. How may I help you with NFT Three."]
-
-services = ["3D-Rendering", "Interior 3D-Rendering", "3D animation"]
-
 nftChoices = [" 1) nft ",
               " 2) nft ",
               " 3) nft "]
 
+nft = ["NFT 1 is a great choice. How may I help you with NFT one.",
+       "NFT 2 is a fantastic choice. How may I help you with NFT Two.",
+       "NFT 3 is a excellent choice. How may I help you with NFT Three."]
+
+policyOne = "5f8e2e807dbc1b4892ee9cf9ddfb80ac6df60900e762492fdc62e770"
+urlOne = "https://pool.pm/asset1cz0qag4c7ufa4qnwndem954elwjf3u9hlk37n6"
+policyTwo = "97af2538db3da8d2eea19729af29df11a73914e90d3912cbbd85f985"
+urlTwo = "https://pool.pm/asset1cx7zh27krmesjvj2cx3xlvc7tr54k6esnrcfna"
+policyThree = "0b101ab5928f82b72daa3e33ec56c3f0c328cdd66034e483da2db75f"
+urlThree = "https://pool.pm/asset1ywa9jzx8ftzfnp7qc2fc2vkdxv26fm93cxr5xg"
+
+
+nftPolicy = [policyOne, policyTwo, policyThree]
+
+services = ["3D-Rendering", "Interior 3D-Rendering", "3D animation"]
 
 print("Hello thank you for contacting us at HQA. My name is Ada, a chat bot.\n" "Created by our very own Stephen.\n" "Below are our current on-going sales.")
 print("Black Members Hoodie 20% off"
@@ -113,15 +122,27 @@ while i != (A, B, C, D):
                 print(string, i)
     # Sequence that occurs when the user choice is B
     elif i == "B":
-        print(BB, nftChoices)
+        print(BB)
+        print(nftChoices)
         i = input()
         i = int(i)
-        if i > 1:
-            print(nft[1])
-        elif i < 2:
+        if i == 1:
             print(nft[0])
-        elif i == 3:
+            string = "Sounds perfect. I will contact Stephen to assist you with NFT 1."
+            print(string)
+            print("Policy ID: ", nftPolicy[0])
+            print(urlOne)
+        if i == 2:
+            print(nft[1])
+            string = "Sounds perfect. I will contact Stephen to assist you with NFT 2."
+            print(string)
+            print("Policy ID: ", nftPolicy[1])
+        if i == 3:
             print(nft[2])
+            string = "Sounds perfect. I will contact Stephen to assist you with NFT 3."
+            print(string)
+            print("Policy ID: ", nftPolicy[2])
+            break
     # Sequence that occurs when the user choice is C
     elif i == "C":
         print(CC, services)
